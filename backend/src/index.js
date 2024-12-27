@@ -18,12 +18,13 @@ const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: "https://message.matangievent.com",
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: 'https://message.matangievent.com',
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: ['GET', 'POST', 'OPTIONS']
+}));
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
