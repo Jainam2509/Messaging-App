@@ -22,11 +22,11 @@ const App = () => {
 
   useEffect(() => {
     checkAuth();
-  }, []); // Removed dependency array to ensure checkAuth is called only once
+  }, [checkAuth]);
 
   //console.log({ authUser });
 
-  if (isCheckingAuth)
+  if (isCheckingAuth && !authUser)
     return (
       <div className="flex items-center justify-center h-screen">
         <Loader className="size-10 animate-spin" />
