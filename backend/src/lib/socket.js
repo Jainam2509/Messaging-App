@@ -7,7 +7,9 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://message.matangievent.com"],
+    origin: ["https://message.matangievent.com"], // Add your frontend origin here
+    methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
   },
 });
 
