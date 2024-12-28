@@ -53,18 +53,18 @@ export const login = async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email });
-    console.log("1");
+
     if (!user) {
       return res.status(400).json({ message: "Invalid credentials" });
     }
-    console.log("2");
+
     const isPasswordCorrect = await bcrypt.compare(password, user.password);
     if (!isPasswordCorrect) {
       return res.status(400).json({ message: "Invalid credentials" });
     }
-    console.log("3");
+
     generateToken(user._id, res);
-    console.log("4");
+
     res.status(200).json({
       _id: user._id,
       username: user.username,
