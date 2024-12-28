@@ -52,7 +52,7 @@ export const signup = async (req, res) => {
 export const login = async (req, res) => {
   const { email, password } = req.body;
   console.log("Login");
-  return res.status(200).json({ message: "Login Reached" });
+  return res.status(200).json({ message: email, password: password });
   // try {
   //   const user = await User.findOne({ email });
 
