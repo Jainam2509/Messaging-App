@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "www.matangievent.com/api",
+  baseURL: "https://www.matangievent.com",
   withCredentials: true,
 });
