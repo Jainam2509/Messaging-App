@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "https://messaging-app-backend-nu.vercel.app/api",
+  baseURL: "http://localhost:5001/api",
   withCredentials: true,
 });
