@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5174"], // Add your frontend origin here
+    origin: ["https://messaging-app-j3o4.onrender.com/login"], // Add your frontend origin here
     methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
