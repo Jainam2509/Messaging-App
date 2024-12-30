@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://messaging-app-j3o4.onrender.com"], // Add your frontend origin here
+    origin: ["www.matangievent.com"], // Add your frontend origin here
     methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   },
