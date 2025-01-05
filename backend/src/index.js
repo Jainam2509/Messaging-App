@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["https://event.matangievent.com"], // Add your frontend origin here
+    origin: ["https://message.matangievent.com"], // Add your frontend origin here
     methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
